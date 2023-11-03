@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de contatos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=AR+One+Sans&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <img src="./assets/contato.png" alt="">
+        <h1>Agenda de Contatos</h1>
+    </header>
+    
+    <form id="formulario">
+        <input type="text" id="nomeCont" required>
+        <input type="text" id="numbCont" max="9" min="0" maxlength="11" required pattern="[0-9]{9,11}" oninput="justNumb(this)">
+        <input id="enviar" type="submit" value="Adicionar+">
+    </form>    
+    <p id="msgErro"></p>
+    <div id="container">
+        <table cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Nome do Contato</th>
+                    <th>Número</th>
+                </tr>
+            </thead>
+            <tbody id="tCorpo">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
